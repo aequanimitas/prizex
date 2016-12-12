@@ -16,6 +16,7 @@ defmodule Prizex.Router do
   scope "/", Prizex do
     pipe_through :browser # Use the default browser stack
 
+    get "/rewards", RewardController, :index
     get "/", PageController, :index
   end
 

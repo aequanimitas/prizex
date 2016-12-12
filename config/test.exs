@@ -12,8 +12,8 @@ config :logger, level: :warn
 # Configure your database
 config :prizex, Prizex.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
-  database: "prizex_test",
+  username: "prizex_dev",
+  password: "prizex_dev",
+  database: "prizex_dev",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
