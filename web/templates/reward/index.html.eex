@@ -1,1 +1,10 @@
 <h2>Rewards</h2>
+<div class="container">
+<%= for reward <- @rewards do %>
+  <div class="col s1">
+    <b><%= reward.name %></b>
+    <%= link "details", to: reward_path(@conn, :show, reward.id) %>
+  </div>
+<% end %>
+  
+</div>
