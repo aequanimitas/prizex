@@ -9,7 +9,7 @@ defmodule Prizex do
     # Define workers and child supervisors to be supervised
     children = [
       # Start the Ecto repository
-      # supervisor(Prizex.Repo, []),
+      supervisor(Prizex.Repo, []),
       # Start the endpoint when the application starts
       supervisor(Prizex.Endpoint, []),
       # Start your own worker by calling: Prizex.Worker.start_link(arg1, arg2, arg3)

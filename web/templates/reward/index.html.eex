@@ -2,7 +2,7 @@
 <div class="container">
 <%= for reward <- @rewards do %>
   <div class="col s1">
-    <b><%= reward.name %></b>
+    <%= render "reward.html", reward: reward %>
     <%= link "details", to: reward_path(@conn, :show, reward.id) %>
   </div>
 <% end %>
