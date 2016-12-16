@@ -1,3 +1,0 @@
-<div><span><b>
-  <%= @reward.name %>
-</b></span></div>

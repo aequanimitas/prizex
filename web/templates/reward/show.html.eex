@@ -1,3 +1,0 @@
-<h3>Reward Info</h3>
-<%= render "reward.html", reward: @reward %>
-<span> Requires <%= @reward.time_required %> minutes of doing tasks  </span>
