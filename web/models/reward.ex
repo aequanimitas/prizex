@@ -1,11 +1,20 @@
 defmodule Prizex.Reward do
-  # time required defaults to minutes
   use Prizex.Web, :model
-  
+
   schema "rewards" do
     field :name, :string
-    # string for now, architecture is a bit complicated
-    field :required_total, :string 
-    timestamps
+    field :required_time, :string
+    field :date_redeemed, Ecto.DateTime
+
+    timestamps()
+  end
+
+  @doc """
+  Builds a changeset based on the `struct` and `params`.
+  """
+  def changeset(struct, params \\ %{}) do
+    struct
+    |> cast(params, [:name, :required_time])
+    |> validate_required([:name, :required_time])
   end
 end
