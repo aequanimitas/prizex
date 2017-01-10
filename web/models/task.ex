@@ -3,9 +3,10 @@ defmodule Prizex.Task do
 
   schema "tasks" do
     field :name, :string
-    field :date_start, Ecto.DateTime
-    field :date_end, Ecto.DateTime
-
+    field :date_start, Ecto.Date
+    field :date_end, Ecto.Date
+    field :time_start, Ecto.DateTime
+    field :time_end, Ecto.DateTime
     timestamps()
   end
 
@@ -16,7 +17,7 @@ defmodule Prizex.Task do
   """
   def changeset(struct, params \\ %{}) do
     struct
-    |> cast(params, [:name, :date_start, :date_end])
-    |> validate_required([:name, :date_start, :date_end])
+    |> cast(params, [:name, :date_start, :date_end, :time_start, :time_end])
+    |> validate_required([:name, :date_start, :date_end, :time_start, :time_end])
   end
 end
