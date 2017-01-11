@@ -3,7 +3,7 @@ defmodule Prizex.User do
 
   schema "users" do
     field :username, :string
-
+    has_many :user_tasks, Prizex.Task
     timestamps()
   end
 
